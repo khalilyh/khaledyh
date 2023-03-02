@@ -1,0 +1,41 @@
+ALGORITHM sum_of_pairs_of_vector_numbers
+   var
+ vector : ARRAY of INTEGER
+    FOR i = 0 TO size - 1 DO
+        READ vector[i] FROM USER
+    END FOR
+    DECLARE sum AS INTEGER
+    SET sum = 0
+    FOR i = 0 TO size - 1 DO
+        FOR j = i + 1 TO size - 1 DO
+            SET sum = sum + vector[i] + vector[j]
+        END FOR
+    END FOR
+    PRINT sum
+END ALGORITHM
+/////////////////////////////////////////////////////
+ALGORITHM sum_of_unique_elements(set1, set2)
+VAR
+    sum: INTEGER
+BEGIN
+    sum = 0
+    for elem in set1:
+        if elem not in set2:
+            sum += elem
+    for elem in set2:
+        if elem not in set1:
+            sum += elem
+    ssum_of_unique_elements(set1, set2):
+    sum = 0
+    for elem in set1:
+        if elem not in set2:
+            sum += elem
+    for elem in set2:
+        if elem not in set1:
+            sum += elem
+    write(sum)
+    END_if
+    END_for
+    END_for
+    
+END 
